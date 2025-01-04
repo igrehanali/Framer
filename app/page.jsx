@@ -5,6 +5,11 @@ import ExpenseTrackerSection from "@/components/expense-tracker-section";
 import About from "@/components/About";
 import Features from "@/components/Features";
 import HowDataAIWorks from "@/components/ui/HowDataAIWorks";
+import Pricing from "@/components/pricing";
+import TestimonialGrid from "@/components/testimonial-grid";
+import FAQ from "@/components/faq";
+import CTA from "@/components/ui/Cta";
+import Footer from "@/components/ui/Footer";
 
 export default function Page() {
   return (
@@ -16,6 +21,11 @@ export default function Page() {
       <About />
       <Features />
       <HowDataAIWorks />
+      <Pricing />
+      <TestimonialGrid />
+      <FAQ />
+      <CTA />
+      <Footer />
     </>
   );
 }
