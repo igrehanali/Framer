@@ -8,7 +8,7 @@ import HowDataAIWorks from "@/components/ui/HowDataAIWorks";
 import Pricing from "@/components/pricing";
 import TestimonialGrid from "@/components/testimonial-grid";
 import FAQ from "@/components/faq";
-import CTA from "@/components/ui/Cta";
+import Cta from "@/components/Cta";
 import Footer from "@/components/ui/Footer";
 
 export default function Page() {
@@ -24,7 +24,7 @@ export default function Page() {
       <Pricing />
       <TestimonialGrid />
       <FAQ />
-      <CTA />
+      <Cta />
       <Footer />
     </>
   );
