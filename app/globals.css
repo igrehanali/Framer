@@ -85,24 +85,55 @@
   animation-play-state: paused;
 }
 
+@keyframes marquee-up {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes marquee-down {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.animation-marquee-up {
+  animation: marquee-up 10s linear infinite;
+}
+
+.animation-marquee-down {
+  animation: marquee-down 10s linear infinite;
+}
+
+.space-y-4>* {
+  margin-bottom: 1rem;
+}
 
 /* Custom scrollbar for Webkit browsers (Chrome, Safari, Edge) */
 html::-webkit-scrollbar {
   width: 8px;
   /* Set scrollbar width */
-  background-color: #02080F;
+  background-color: #02080f;
   /* Background of the scrollbar */
 }
 
 html::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #030E1E, #02080F);
+  background: linear-gradient(180deg, #030e1e, #02080f);
   /* Gradient thumb */
   border-radius: 4px;
   /* Rounded scrollbar thumb */
 }
 
 html::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #02080F, #030E1E);
+  background: linear-gradient(180deg, #02080f, #030e1e);
   /* Slightly inverted gradient on hover */
 }
 
@@ -110,6 +141,10 @@ html::-webkit-scrollbar-thumb:hover {
 html {
   scrollbar-width: thin;
   /* Makes scrollbar smaller */
-  scrollbar-color: #030E1E #02080F;
+  scrollbar-color: #030e1e #02080f;
   /* Thumb color and background color */
+}
+
+body {
+  background-color: #02080f;
 }

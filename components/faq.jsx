@@ -42,7 +42,7 @@ export default function FAQ() {
   }, [openIndex]);
 
   return (
-    <div className="min-h-screen bg-[#02070D] text-white p-8 md:p-16 lg:p-24">
+    <div className="bg-[#02070D] text-white p-8 md:p-16 lg:p-24">
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-24">
         <div>
           <h2 className="text-5xl md:text-5xl mb-6 max-w-96">
