@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function TestimonialCard({ company, quote, author }) {
   return (
-    <div className="lg:p-12 p-8 flex flex-col gap-8 border-[#012550] bg-gradient-to-b from-[#031021] to-[#010D19] rounded-3xl shadow-xl">
+    <div className="p-8 flex flex-col gap-8 border-[#012550] bg-gradient-to-b from-[#031021] to-[#010D19] rounded-3xl shadow-xl">
       <Image
         src={company.logo}
         alt={`${company.name} logo`}
@@ -60,8 +60,8 @@ export default function Testimonials() {
 
   return (
     <section className="py-24 px-4 ">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium text-white text-center mb-16">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-medium text-white text-center mb-16">
           What our users say.
         </h2>
         <div className="grid md:grid-cols-2 gap-8">
