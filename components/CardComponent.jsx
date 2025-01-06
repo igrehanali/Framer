@@ -33,7 +33,7 @@ export default function Hero() {
   ];
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div className="relative flex items-center justify-center overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto text-center">
         <div className="mt-12 flex flex-wrap justify-center gap-3">
           {cardData.map((card, index) => {

@@ -2,6 +2,7 @@ import React from "react";
 import Heading from "./Heading";
 import Image from "next/image";
 import { Button } from "./button";
+import GradientButton from "./GradientButton";
 
 const HowDataAIWorks = () => {
   const sections = [
@@ -70,13 +71,7 @@ const HowDataAIWorks = () => {
                     <p className="text-[#aaa] my-4 max-w-[400px]">
                       {section.description}
                     </p>
-                    <Button
-                      variant="outline"
-                      size="lg"
-                      className="relative px-4 py-2 md:px-6 md:py-2 text-white rounded-full text-sm bg-transparent transition-colors duration-300 ease-in-out hover:bg-blue-500 before:absolute before:inset-0 before:rounded-full before:border-[1px] before:border-transparent before:bg-[linear-gradient(to-right,_blue,_blue_50%,_white_50%,_white)] before:p-[1px] before:content-[''] before:z-[-1]"
-                    >
-                      Get Started Now
-                    </Button>
+                    <GradientButton text="Get Started Now!" />
                   </div>
                 </>
               ) : (
@@ -88,13 +83,7 @@ const HowDataAIWorks = () => {
                     <p className="text-[#aaa] my-4 max-w-[400px]">
                       {section.description}
                     </p>
-                    <Button
-                      variant="outline"
-                      size="lg"
-                      className="relative px-4 py-2 md:px-6 md:py-2 text-white rounded-full text-sm bg-transparent transition-colors duration-300 ease-in-out hover:bg-blue-500 before:absolute before:inset-0 before:rounded-full before:border-[1px] before:border-transparent before:bg-[linear-gradient(to-right,_blue,_blue_50%,_white_50%,_white)] before:p-[1px] before:content-[''] before:z-[-1]"
-                    >
-                      Get Started Now
-                    </Button>
+                    <GradientButton text="Get Started Now" />
                   </div>
                   <Image
                     src={section.image}

@@ -5,7 +5,8 @@ import { Card } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import { useState } from "react";
 import Heading from "./ui/Heading";
-
+import GradientButton from "./ui/GradientButton";
+// </div>
 export default function Pricing() {
   const [billingType, setBillingType] = useState("monthly");
 
@@ -18,13 +19,13 @@ export default function Pricing() {
       features: [
         "Core business management tools",
         "Task and project management",
-        "Basic analytics and reporting",
+        "Basic analytics and rep</div>orting",
         "Limited AI driven insights",
       ],
       buttonText: "Get Start 14 Days Free Trial",
       buttonVariant: "outline",
       buttonClass:
-        "relative px-4 py-2 md:px-6 md:py-2 text-white rounded-full text-sm bg-transparent transition-colors duration-300 ease-in-out hover:bg-blue-500 before:absolute before:inset-0 before:rounded-full before:border-[1px] before:border-transparent before:bg-[linear-gradient(to-right,_blue,_blue_50%,_white_50%,_white)] before:p-[1px] before:content-[''] before:z-[-1]",
+        "relative px-4 py-2 md:px-6 md:py-2 text-white rounded-full text-sm bg-tr</div>ansparent transition-colors duration-300 ease-in-out hover:bg-blue-500 before:absolute before:inset-0 before:rounded-full before:border-[1px] before:border-transparent before:bg-[linear-gradient(to-right,_blue,_blue_50%,_white_50%,_white)] before:p-[1px] before:content-[''] before:z-[-1]",
       cardClass:
         "relative border-[#0073FF] p-6 rounded-2xl overflow-hidden group bg-[#021327]",
       gradientClass:
@@ -43,7 +44,7 @@ export default function Pricing() {
       ],
       buttonText: "Get Started Now",
       buttonVariant: "solid",
-      buttonClass: "w-full bg-blue-600 hover:bg-blue-700 rounded-2xl",
+      buttonClass: "w-full bg-blue-600 hover:bg-blue-700 rounded-full",
       cardClass:
         "relative bg-[#0D1425] border-[#0073FF] p-6 rounded-2xl overflow-hidden group",
       gradientClass:
@@ -106,7 +107,7 @@ export default function Pricing() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {plans.map((plan, index) => (
-            <PlanCard key={index} plan={plan} />
+            <PlanCard key={index} plan={plan} index={index} />
           ))}
         </div>
       </div>
@@ -114,7 +115,7 @@ export default function Pricing() {
   );
 }
 
-function PlanCard({ plan }) {
+function PlanCard({ plan, index }) {
   return (
     <Card className={plan.cardClass}>
       <div className={plan.gradientClass} />
@@ -139,19 +140,24 @@ function PlanCard({ plan }) {
         <div className="space-y-4">
           <p className="font-semibold text-gray-200">Features Included:</p>
           <ul className="space-y-5">
-            {plan.features.map((feature, index) => (
-              <FeatureItem key={index} text={feature} />
+            {plan.features.map((feature, featureIndex) => (
+              <FeatureItem key={featureIndex} text={feature} />
             ))}
           </ul>
         </div>
 
-        <Button
-          variant={plan.buttonVariant}
-          size="lg"
-          className={plan.buttonClass}
-        >
-          {plan.buttonText}
-        </Button>
+        {/* Conditional rendering for button components */}
+        {index === 1 ? (
+          <Button
+            variant={plan.buttonVariant}
+            size="lg"
+            className={plan.buttonClass}
+          >
+            {plan.buttonText}
+          </Button>
+        ) : (
+          <GradientButton text="Get Started Now" />
+        )}
       </div>
     </Card>
   );

@@ -11,47 +11,56 @@ import { Button } from "./button";
 const Footer = () => {
   return (
     <section>
-      <section className="relative overflow-hidden bg-[#020817] my-10">
-        {/* Background Image */}
-        <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/G02B9XJwZEGlxitF2OWeEjbrJjU-9RS8fLKi5XN8DI5r2CkmA5YCzfqxg9.png"
-          alt="Grid background"
-          fill
-          className="object-cover opacity-40"
-          priority
-        />
+      <div className="max-w-7xl mx-auto">
+        <section className="relative overflow-hidden my-6 border-[#082C57] border-2 rounded-3xl">
+          /* Background Image */
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/G02B9XJwZEGlxitF2OWeEjbrJjU-9RS8fLKi5XN8DI5r2CkmA5YCzfqxg9.png"
+            alt="Grid background"
+            fill
+            className="object-cover opacity-50"
+            priority
+          />
+          <div className="relative mx-auto max-w-6xl px-4 py-4">
+            <div className="grid items-center gap-8 justify-between lg:grid-cols-2 lg:gap-32">
+              <div className="space-y-8">
+                <h1 className="text-4xl text-white lg:text-5xl font-semibold">
+                  Start your journey now transform your business with AI
+                  solutions.
+                </h1>
 
-        <div className="relative mx-auto max-w-6xl px-4 py-10">
-          <div className="grid items-center gap-8 justify-between lg:grid-cols-2 lg:gap-32">
-            <div className="space-y-8">
-              <h1 className="text-4xl text-white lg:text-5xl">
-                Start your journey now transform your business with AI
-                solutions.
-              </h1>
-
-              <button className="px-8 py-3 rounded-full bg-gradient-to-r from-[#306CF2] to-[#2569F3] text-white font-medium transform hover:scale-105 transition-transform duration-200 hover:shadow-lg hover:shadow-blue-500/25">
-                Get The Template
-              </button>
-            </div>
-            <div className="relative h-[500px]">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TL0rEXzJCaowoBFXybmVmKOt1Xs-Mxc4LVZl3LqZoDDgawgBg2eBTl264B.png"
-                alt="AI Camera Device"
-                width={400}
-                height={400}
-                className="absolute right-0 top-1/2 transform -translate-y-1/2"
-                priority
-              />
+                <button className="px-8 py-3 rounded-full bg-gradient-to-r from-[#306CF2] to-[#2569F3] text-white font-medium transform hover:scale-105 transition-transform duration-200 hover:shadow-lg hover:shadow-blue-500/25">
+                  Get The Template
+                </button>
+              </div>
+              <div className="relative h-[500px]">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TL0rEXzJCaowoBFXybmVmKOt1Xs-Mxc4LVZl3LqZoDDgawgBg2eBTl264B.png"
+                  alt="AI Camera Device"
+                  width={400}
+                  height={400}
+                  className="absolute right-0 top-1/2 transform -translate-y-1/2"
+                  priority
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
       <footer
-        className="bg-gray-900 text-white py-16 md:py-32"
+        className="bg-[#02070D]  text-white py-16 md:py-32"
+        // style={{
+        //   backgroundImage: "url('/images/footer-bg.avif')",
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "center",
+        //   opacity: 0.5,
+        //   zIndex: -1,
+        // }}
         style={{
-          backgroundImage: "url('/images/footer-bg.avif')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundImage:
+            "radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px)",
+          backgroundSize: "20px 20px", // Adjust size of dots
+          opacity: 0.8, // Adjust opacity
         }}
       >
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl px-4 md:px-0">

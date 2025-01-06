@@ -2,6 +2,7 @@ import React from "react";
 import Heading from "./ui/Heading";
 import Image from "next/image";
 import { Button } from "./ui/button";
+import GradientButton from "./ui/GradientButton";
 
 const InfoCard = ({ title, description, imageSrc }) => {
   return (
@@ -12,13 +13,7 @@ const InfoCard = ({ title, description, imageSrc }) => {
         <p className="text-[#AAAAAA] text-lg max-w-[460px] py-4">
           {description}
         </p>
-        <Button
-          variant="outline"
-          size="lg"
-          className="relative px-4 py-2 md:px-6 md:py-2 text-white rounded-full text-sm bg-transparent transition-colors duration-300 ease-in-out hover:bg-blue-500 before:absolute before:inset-0 before:rounded-full before:border-[1px] before:border-transparent before:bg-[linear-gradient(to-right,_blue,_blue_50%,_white_50%,_white)] before:p-[1px] before:content-[''] before:z-[-1]"
-        >
-          Learn More
-        </Button>
+        <GradientButton text="Learn More" />
       </div>
       <div className="relative flex items-center justify-center rounded-lg mb-4">
         <Image

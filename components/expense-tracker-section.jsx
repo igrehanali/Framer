@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import GradientButton from "./ui/GradientButton";
 
 export default function ExpenseTrackerSection() {
   return (
@@ -49,13 +50,7 @@ export default function ExpenseTrackerSection() {
             </div>
           </div>
 
-          <Button
-            variant="outline"
-            size="lg"
-            className="relative px-4 py-2 md:px-6 md:py-2 text-white rounded-full text-sm bg-transparent transition-colors duration-300 ease-in-out hover:bg-blue-500 before:absolute before:inset-0 before:rounded-full before:border-[1px] before:border-transparent before:bg-[linear-gradient(to-right,_blue,_blue_50%,_white_50%,_white)] before:p-[1px] before:content-[''] before:z-[-1]"
-          >
-            Get Started Now
-          </Button>
+          <GradientButton text="Get started now" />
         </div>
       </div>
     </div>

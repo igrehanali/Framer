@@ -24,8 +24,6 @@ export default function Page() {
       <Pricing />
       <TestimonialGrid />
       <FAQ />
-      {/* <Cta /> */}
-      <Footer />
     </>
   );
 }

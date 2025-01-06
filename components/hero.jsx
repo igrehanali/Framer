@@ -2,27 +2,25 @@ import Image from "next/image";
 import StarBackground from "./star-background";
 import WaveBackground from "./wave-background";
 import CardComponent from "./CardComponent";
+import GradientButton from "./GradintButton2";
 
 export default function Hero() {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-b from-black to-[#02070D]">
-      <div className="flex items-center justify-center lg:py-40 py-20">
-        {/* Light Effect */}
-        <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-gradient-radial from-blue-500/30 via-blue-500/10 to-transparent rounded-full blur-3xl opacity-70 pointer-events-none"></div>
-
-        {/* Backgrounds */}
-        <StarBackground />
-        {/* <WaveBackground /> */}
-        <Image
-          src="/images/hero-bg.png"
-          layout="fill"
-          objectFit="contain"
-          className="rotate-12 h-[400px]"
-        />
+    <div className="relative overflow-hidden bg-gradient-to-b from-black to-[#02070D] -mt-24">
+      <div className="absolute inset-0">
+        <div
+          className="absolute w-[800px] h-[800px] bg-gradient-to-tr from-blue-800 via-transparent to-transparent rounded-full blur-2xl opacity-70"
+          style={{ top: "-500px", left: "0px" }}
+        ></div>
+      </div>
+      <StarBackground />
+      <div className="flex items-start justify-start lg:pt-52 pt-20 relative">
+        <Image src="/images/hero-bg.png" layout="fill" objectFit="contain" />
 
         {/* Content */}
-        <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium text-white mb-6 leading-tight">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex flex-col justify-center items-center">
+          <GradientButton text="Beta 1.5 available now" />
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium text-white my-6 leading-tight">
             Accelerating sales & growth
             <br />
             with our AI solutions.
