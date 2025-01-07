@@ -74,7 +74,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <nav
-        className={`md:hidden fixed inset-0 text-white z-50 transition-transform duration-500 ${
+        className={`md:hidden fixed inset-0 text-white z-50 transition-transform duration-500 bg-black ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
